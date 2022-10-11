@@ -16,7 +16,7 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
-    <title>Signin Template · Bootstrap v5.2</title>
+    <title>Newsletter Signup</title>
 
     <link
       rel="canonical"
@@ -110,48 +110,44 @@
       }
     </style>
     <!-- Custom styles for this template -->
-    <link href="styles.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
   </head>
   <body class="text-center">
     <main class="form-signin w-100 m-auto">
-      <form>
-        <img
-          class="mb-4"
-          src="/docs/5.2/assets/brand/bootstrap-logo.svg"
-          alt=""
-          width="72"
-          height="57"
+      <form action="/" method="post">
+        <img class="mb-4" src="/img/user.png" alt="" width="72" height="72" />
+        <h1 class="h3 mb-3 fw-normal">Sign Up to My Newsletter</h1>
+
+        <input
+          type="text"
+          name="fName"
+          class="form-control top"
+          placeholder="First Name"
+          required
+          autofocus
         />
-        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
-        <div class="form-floating">
-          <input
-            type="email"
-            class="form-control"
-            id="floatingInput"
-            placeholder="name@example.com"
-          />
-          <label for="floatingInput"></label>
-        </div>
-        <div class="form-floating">
-          <input
-            type="password"
-            class="form-control"
-            id="floatingPassword"
-            placeholder="Password"
-          />
-          <label for="floatingPassword"></label>
-        </div>
+        <input
+          type="text"
+          name="lName"
+          class="form-control middle"
+          placeholder="Last Name"
+          required
+        />
 
-        <div class="checkbox mb-3">
-          <label>
-            <input type="checkbox" value="remember-me" /> Remember me
-          </label>
-        </div>
+        <input
+          type="email"
+          name="email"
+          class="form-control bottom"
+          placeholder="name@example.com"
+          required
+        />
+
+        <div class="checkbox mb-3"></div>
         <button class="w-100 btn btn-lg btn-primary" type="submit">
-          Sign in
+          Sign Up
         </button>
-        <p class="mt-5 mb-3 text-muted">&copy; 2017–2022</p>
+        <p class="mt-5 mb-3 text-muted">&copy; Cem's News <br />2021-2021</p>
       </form>
     </main>
   </body>
