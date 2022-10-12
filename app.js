@@ -7,7 +7,7 @@ const https = require("https");
 
 require("dotenv").config();
 
-const API_KEY = process.env.API_KEY;
+let API_KEY = process.env.API_KEY;
 
 const app = express();
 
@@ -66,4 +66,5 @@ app.post("/failure", function (req, res) {
 
 app.listen(process.env.PORT || 3000, function () {
   console.log("Server is running on port 3000");
+  console.log(API_KEY);
 });
