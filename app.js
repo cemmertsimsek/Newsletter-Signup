@@ -5,6 +5,10 @@ const bodyParser = require("body-parser");
 const request = require("request");
 const https = require("https");
 
+require("dotenv").config();
+
+let API_KEY = process.env.API_KEY;
+
 const app = express();
 
 app.use(express.static("public")); // to use our external css file and the images we provide, we created a directiory called public and source it via express.static()
@@ -38,7 +42,7 @@ app.post("/", function (req, res) {
 
   const options = {
     method: "POST",
-    auth: "cem1:cd68a69553c66a8e836ffd51c95aa136-us21",
+    auth: "cem1:" + API_KEY,
   };
 
   const request = https.request(url, options, function (response) {
@@ -52,7 +56,7 @@ app.post("/", function (req, res) {
     });
   });
 
-  // request.write(jsonData);
+  request.write(jsonData);
   request.end();
 });
 
