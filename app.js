@@ -7,7 +7,7 @@ const https = require("https");
 
 require("dotenv").config();
 
-let API_KEY = process.env.API_KEY;
+const API_KEY = process.env.API_KEY;
 
 const app = express();
 
